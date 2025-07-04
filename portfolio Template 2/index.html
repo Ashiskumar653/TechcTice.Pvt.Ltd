@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visual Designer Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #1e1e1e;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 3rem;
+    }
+
+    .hero {
+        width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #fff;
+      color: #000;
+      padding: 2rem;
+      border-radius: 10px;
+    }
+
+    .hero-text {
+      max-width: 50%;
+    }
+
+    .hero-text h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero-text p {
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-text button {
+      background-color: #000;
+      color: #fff;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .hero-image img {
+      width: 200px;
+      border-radius: 50%;
+    }
+
+    h2 {
+      margin: 2rem 0 1rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+
+    .card {
+      background-color: #fff;
+      color: #000;
+      padding: 1rem;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 5px;
+      margin-bottom: 0.5rem;
+    }
+
+    .card h3 {
+      font-size: 1.1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="hero">
+        <div class="hero-text">
+          <h1>Front-End  Developer</h1>
+          <p>This is a designer's template for students to showcase their work.</p>
+          <button>Download</button>
+        </div>
+        <div class="hero-image">
+          <img src="./linkdin profile.jpg" alt="Profile">
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <h2>Latest Work</h2>
+      <div class="grid">
+        <div class="card">
+          <img src="https://th.bing.com/th/id/OIP.QBOFQuQlfySLirlIrO_CnwAAAA?rs=1&pid=ImgDetMain&cb=idpwebp2&o=7&rm=3" alt="Work" height="150">
+          <h3>Project Title</h3>
+        </div>
+        <div class="card">
+          <img src="https://colorlib.com/wp/wp-content/uploads/sites/2/free-colorlib-html-website-templates.jpg" alt="Work" height="150">
+          <h3>Design Example</h3>
+        </div>
+        <div class="card">
+          <img src="https://th.bing.com/th/id/OIP.PYmp1aHbGtBm6HtS-oQwxgHaEj?rs=1&pid=ImgDetMain&cb=idpwebp2&o=7&rm=3" alt="Work" height="150px">
+          <h3>Art Direction</h3>
+        </div>
+        <div class="card">
+          <img src="https://th.bing.com/th/id/OIP.qVehpyjSaTqL6fYeM9AImAHaEd?w=680&h=409&rs=1&pid=ImgDetMain&cb=idpwebp2&o=7&rm=3" alt="Work" height="150px">
+          <h3>Branding</h3>
+        </div>
+        <div class="card">
+          <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20230105093722/10-HTML-Project-Ideas-Topics-For-Beginners-660x310.png" alt="Work" height="150px">
+          <h3>Packaging</h3>
+        </div>
+        <div class="card">
+          <img src="https://www.ultimatebeaver.com/wp-content/uploads/2016/12/Thank-you-page-template_header.png" alt="Work" height="150px">
+          <h3>Product Photography</h3>
+          
+        </div>
+        <div class="card">
+          <img src="https://th.bing.com/th/id/OIP.PYmp1aHbGtBm6HtS-oQwxgHaEj?rs=1&pid=ImgDetMain&cb=idpwebp2&o=7&rm=3" alt="Work" height="150px">
+          <h3>Art Direction</h3>
+        </div>
+        <div class="card">
+          <img src="https://th.bing.com/th/id/OIP.qVehpyjSaTqL6fYeM9AImAHaEd?w=680&h=409&rs=1&pid=ImgDetMain&cb=idpwebp2&o=7&rm=3" alt="Work" height="150px">
+          <h3>Branding</h3>
+        </div>
+        <div class="card">
+          <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20230105093722/10-HTML-Project-Ideas-Topics-For-Beginners-660x310.png" alt="Work" height="150px">
+          <h3>Packaging</h3>
+        </div>
+        <div class="card">
+          <img src="https://www.ultimatebeaver.com/wp-content/uploads/2016/12/Thank-you-page-template_header.png" alt="Work" height="150px">
+          <h3>Product Photography</h3>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
