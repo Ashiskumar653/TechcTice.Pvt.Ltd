@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<style>
+    .btn{
+        margin: 0px 0px 0px 500px;
+        background-color: rgb(88, 114, 114);
+        font-weight: 800;
+    }
+    .btn:hover{
+        background-color: rgb(5, 157, 107);
+    
+    }
+
+ body {
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .hero {
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+    }
+    .feature-card {
+      transition: transform 0.3s ease;
+    }
+    .feature-card:hover {
+      transform: translateY(-5px);
+    }
+    footer {
+      background-color: #343a40;
+      color: white;
+      padding: 20px 0;
+    }
+
+</style>
+<body>
+    
+    <h3>Bootstrap Grid</h3>
+
+
+    <!-- <div class="container" style="background-color:black;color: rgb(29, 26, 26);">
+        <div class="row">
+            <div class="col-lg-12 mt-5 text-center" style="background-color: rgb(255, 255, 255);">
+                <p>I am learning bootstrap</p>
+            </div>
+            <div class="col-lg-6 mt-5">
+                <p>this is my 1st grid system class</p>
+            </div>
+       <button class="btn" style="color: white; ">Submit</button>
+        </div>
+    </div> -->
+
+ <section class="hero">
+    <div class="container">
+      <h1 class="display-4">Welcome to My Grid Layout</h1>
+      <p class="lead">This is a responsive page built with Bootstrap 5's grid system.</p>
+      <a href="#" class="btn btn-light btn-lg mt-3">Get Started</a>
+    </div>
+  </section>
+
+
+
+<div class="jumbotron text-center">
+  <h1>My First Bootstrap Page</h1>
+  <p>Resize this responsive page to see the effect!</p> 
+</div>
+  
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <h3>Column 1</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>Column 2</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>Column 3</h3>        
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-3">.col-sm-4</div>
+  <div class="col-sm-4">.col-sm-4</div>
+  <div class="col-sm-4">.col-sm-4</div>
+</div>
+
+ <!-- Navbar -->
+  
+
+  <!-- Hero Section -->
+  <!-- <section class="hero">
+    <div class="container">
+      <h1 class="display-4">Welcome to My Grid Layout</h1>
+      <p class="lead">This is a responsive page built with Bootstrap 5's grid system.</p>
+      <a href="#" class="btn btn-light btn-lg mt-3">Get Started</a>
+    </div>
+  </section> -->
+
+  <!-- Feature Section -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-5">Our Features</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card feature-card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">Responsive</h5>
+              <p class="card-text">Built with mobile-first design and adaptable layouts.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card feature-card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">Easy to Use</h5>
+              <p class="card-text">Simple, clean code using Bootstrap’s powerful grid.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card feature-card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">Modern Design</h5>
+              <p class="card-text">Professional and aesthetic design for modern websites.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center">
+    <div class="container">
+      <p class="mb-0">© 2025 MyGridSite. All rights reserved.</p>
+    </div>
+  </footer>
+
+
+
+</body>
+</html>

@@ -1,0 +1,291 @@
+ body{
+    background-color: whitesmoke;
+ }
+ /* 1st nav bar */
+  #first_nav {
+    /* max-width: 100%;
+      min-height: 50px; */
+    height: 50px;
+    background-color: rgb(102, 153, 51);
+  }
+
+  .navbar-brand {
+    font-size: medium;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+
+  .p-5 {
+    letter-spacing: 2px;
+  }
+
+  /* 2nd nav bar */
+  #Second_navbar {
+    height: 50px;
+    font-size: medium;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+
+  /* 3rd nav bar */
+  #button {
+    border-radius: 10px;
+  }
+
+  /* 4th nav bar */
+  #four_nav {
+    font-size: medium;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+
+  #sale {
+    border-radius: 10px;
+  }
+
+  .sale {
+    background-color: rgb(102, 153, 51);
+  }
+
+  /* product scroll section */
+  .category-icon {
+    margin: 15px;
+    font-size: 24px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    /* transition: transform 0.3s ease; */
+  }
+
+  .category-icon:hover {
+    background-color: #e9f5ff;
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+
+  /* card section */
+  .card{
+    margin: 3px;
+    font-size: 15px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    /* display: flex; */
+    height: 320px;
+    width: 300px;
+  }
+  .card img{
+    max-width: 100%;
+    height: 150px;
+    width: 150px;
+    
+  }
+  .card:hover{
+     background-color: #e9f5ff;
+    cursor: pointer;
+    transform: scale(1.01);
+  }
+
+  /* Discounts */
+  #Discounts{
+    background-color: rgb(102, 153, 51);
+    color: white;
+    padding: 5px;
+  }
+  #product_discount{
+    border: 1px solid red;
+    height: 450px;
+    width: 97%;
+    max-width: 100%;
+    border-radius: 5px;
+    background-color: rgb(246, 239, 239);
+  }
+  #juice{
+    background-image: url(	https://ekomart-nextjs.vercel.app/assets/images/discount-product/01.jpg);
+
+    height: 200px;
+    background-repeat: no-repeat;
+    border-radius: 10px 10px 10px 10px;
+  }
+  #chicken{
+    background-image: url(https://ekomart-nextjs.vercel.app/assets/images/discount-product/02.jpg);
+
+    height: 200px;
+    background-repeat: no-repeat;
+    border-radius: 10px 10px 10px 10px;
+  }
+  #perduct_card{
+    height: 200px;
+    border: 1px solid rgb(241, 174, 174);
+    border-radius: 10px;    
+  }
+
+  /* Weekly Best Selling Groceries */
+  #Weekly_Best_Selling{
+    color: black;
+    background-color: rgb(245, 234, 213);
+    border-radius: 25px;
+    font-weight: bold;
+  }
+  #Weekly_Best_Selling:hover{
+    background-color: rgb(102, 153, 51);
+  }
+  .first{
+    background-color: rgb(102, 153, 51) !important;
+    color: white !important;
+  }
+  #Groceries{
+    height: 20px;
+    width: 20px;
+  }
+  #Groceries1{
+    border: 1px solid rgb(251, 208, 208);
+    text-decoration: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: black;
+  }
+  #Groceries1:hover{
+    background-color: rgb(102, 153, 51) !important;
+  }
+  /* Weekend discount */
+  .Weekend_discount{
+    border: 1px solid black;
+    height: 450px;
+    width: 450px;
+    border-radius: 10px;
+   
+  }
+  #Weekend_discount_1{
+     background-image: url(https://ekomart-nextjs.vercel.app/assets/images/category/01.jpg);
+     background-repeat: no-repeat;
+     background-size: 450px 450px;
+  }
+  #Weekend_discount_2{
+     background-image: url(	https://ekomart-nextjs.vercel.app/assets/images/category/02.jpg);
+     background-repeat: no-repeat;
+     background-size: 450px 450px;
+  }
+  #Weekend_discount_3{
+     background-image: url(https://ekomart-nextjs.vercel.app/assets/images/category/03.jpg);
+     background-repeat: no-repeat;
+     background-size: 450px 450px;
+  }
+  #Weekend_button{
+    margin: 30px 0px 0px 30px;
+  }
+
+  /* Top_Trending_Products */
+  #Top_Trending_Products{
+    height: 365px;
+    border-radius: 10px;
+    background-color: rgb(227, 227, 227);
+  }
+  #Top_Trending_Products_button_2{
+    text-decoration: line-through;
+    font-weight: 500;
+    color: black;
+  }
+  #Top_Trending_Products_button{
+    font-weight: bold;
+    color: red;
+  }
+  #Top_Trending_Products_button:hover{
+    color: rgb(102, 153, 51) !important;
+  }
+  #Top_Trending_Products_card{
+    height: 150px;
+  }
+  
+  /* Latest_Blog_Post_Insights */
+  #Latest_Blog_Post_Insights{
+    height: 370px;
+    border-radius: 10px;
+    background-color: rgb(227, 227, 227);
+  }
+  #Latest_Blog_Post_Insights_img{
+    width: 100%;
+  }
+  #Latest_Blog_Post_Insights_img_box{
+    display: block;
+    overflow: hidden;
+  }
+  #blog_full_body:hover{
+    background-color: white !important;
+    cursor: pointer;
+    transform: none !important;
+  }
+  #Latest_Blog_Post_Insights_img:hover{
+    scale: 1.1;
+    transition: .5s;    
+  }
+  #Latest_Blog_text{
+    font-weight: bold;
+  }
+  #Latest_Blog_text img{
+    width: 30px;
+    height: 30px;
+  }
+  #blog_full_body{
+    margin: 25px 5px 25px 5px;
+  }
+  
+  /* footer */
+
+    .footer {
+      background-color: #f8f9fa;
+      padding: 40px 0;
+      font-size: 15px;
+      color: #444;
+      
+    }
+    .footer h5 {
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .footer a {
+      color: #666;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    .footer .phone-number {
+      color: #4caf50;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .footer .icon-circle {
+      background-color: #eaeaea;
+      width: 35px;
+      height: 35px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+    .footer .social-icons a {
+      margin-right: 15px;
+      color: #444;
+    }
+    .footer-bottom {
+      background-color: #f1f1f1;
+      padding: 15px 0;
+      font-size: 14px;
+      text-align: center;
+    }
+    .payment-icons img {
+      height: 30px;
+      margin-right: 10px;
+    }
+    .app-download img {
+      height: 40px;
+      margin: 0 5px;
+    }
+  

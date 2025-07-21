@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Beautiful E-Commerce Webpage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: #f8f9fa;
+        }
+        .navbar {
+            box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+        }
+        .card {
+            border: none;
+            overflow: hidden;
+            box-shadow: 0 2px 18px rgba(0,0,0,0.08);
+            transition: transform 0.3s cubic-bezier(.4,2,.6,1);
+            cursor: pointer;
+            background: #fff;
+        }
+        .card:hover {
+            transform: scale(1.05);
+            z-index: 2;
+        }
+        .card-img-top {
+            transition: transform 0.4s cubic-bezier(.4,2,.6,1);
+            height: 220px;
+            object-fit: cover;
+        }
+        .card:hover .card-img-top {
+            transform: scale(1.15);
+        }
+        .banner-carousel .carousel-item img {
+            max-height: 350px;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+        .dropdown-menu {
+            min-width: 180px;
+        }
+        footer {
+            background: #212529;
+            color: #fff;
+            padding: 40px 0 20px 0;
+        }
+        .footer-link {
+            color: #adb5bd;
+            text-decoration: none;
+        }
+        .footer-link:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand fs-3 fw-bold" href="#">ShopEase</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="shopDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Shop
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="shopDropdown">
+                        <li><a class="dropdown-item" href="#">Men</a></li>
+                        <li><a class="dropdown-item" href="#">Women</a></li>
+                        <li><a class="dropdown-item" href="#">Kids</a></li>
+                        <li><a class="dropdown-item" href="#">Accessories</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="accountDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Account
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="accountDropdown">
+                        <li><a class="dropdown-item" href="#">Login</a></li>
+                        <li><a class="dropdown-item" href="#">Register</a></li>
+                        <li><a class="dropdown-item" href="#">Orders</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Banner Carousel -->
+<div id="bannerCarousel" class="carousel slide mb-5 mt-3 banner-carousel container" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1200&q=80" class="d-block w-100" alt="Summer Sale Banner">
+            <div class="carousel-caption d-none d-md-block">
+                <h3 class="fw-bold">Summer Sale</h3>
+                <p>Up to 50% off on selected items!</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=1200&q=80" class="d-block w-100" alt="New Arrivals Banner">
+            <div class="carousel-caption d-none d-md-block">
+                <h3 class="fw-bold">New Arrivals</h3>
+                <p>Discover the latest trends this season.</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80" class="d-block w-100" alt="Accessories Banner">
+            <div class="carousel-caption d-none d-md-block">
+                <h3 class="fw-bold">Accessories</h3>
+                <p>Complete your look with our new accessories.</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=1200&q=80" class="d-block w-100" alt="Kids Collection Banner">
+            <div class="carousel-caption d-none d-md-block">
+                <h3 class="fw-bold">Kids Collection</h3>
+                <p>Fun & fresh styles for kids of all ages.</p>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#bannerCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#bannerCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+</div>
+
+<!-- Cards Section -->
+<div class="container mb-5">
+    <h2 class="text-center mb-4 fw-bold">Featured Products</h2>
+    <div class="row g-4">
+        <!-- Card 1 -->
+        <div class="col-sm-6 col-lg-3">
+            <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Product 1">
+                <div class="card-body">
+                    <h5 class="card-title">Stylish Sunglasses</h5>
+                    <p class="card-text">Trendy shades for every occasion.</p>
+                    <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#buyModal1">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="col-sm-6 col-lg-3">
+            <div class="card h-100">
+                <img src="https://th.bing.com/th/id/OIP.e-2zpPnfwixZr-A4H9vxSgHaEG?w=311&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" class="card-img-top" alt="Product 2">
+                <div class="card-body">
+                    <h5 class="card-title">Classic Wrist Watch</h5>
+                    <p class="card-text">Elegant timepieces for all.</p>
+                    <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#buyModal2">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="col-sm-6 col-lg-3">
+            <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Product 3">
+                <div class="card-body">
+                    <h5 class="card-title">Leather Handbag</h5>
+                    <p class="card-text">Premium quality leather for daily use.</p>
+                    <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#buyModal3">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="col-sm-6 col-lg-3">
+            <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Product 4">
+                <div class="card-body">
+                    <h5 class="card-title">Running Shoes</h5>
+                    <p class="card-text">Lightweight shoes for every run.</p>
+                    <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#buyModal4">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <!-- Card 5 -->
+        <div class="col-sm-6 col-lg-3">
+            <div class="card h-100">
+                <img src="https://tse3.mm.bing.net/th/id/OIP.uRuQUWaf-icYw_hHPlglXwHaE8?pid=Api&P=0&h=220" class="card-img-top" alt="Product 5">
+                <div class="card-body">
+                    <h5 class="card-title">Smart Headphones</h5>
+                    <p class="card-text">Wireless & noise cancelling technology.</p>
+                    <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#buyModal5">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <!-- Card 6 -->
+        <div class="col-sm-6 col-lg-3">
+            <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1475189778702-5ec9941484ae?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Product 6">
+                <div class="card-body">
+                    <h5 class="card-title">Cotton T-shirt</h5>
+                    <p class="card-text">Soft and comfortable for daily wear.</p>
+                    <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#buyModal6">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <!-- Card 7 -->
+        <div class="col-sm-6 col-lg-3">
+            <div class="card h-100">
+                <img src="https://tse3.mm.bing.net/th/id/OIP.nGR5WSasyaRngNUl9hI1oQHaLH?rs=1&pid=ImgDetMain&o=7&rm=3" class="card-img-top" alt="Product 7">
+                <div class="card-body">
+                    <h5 class="card-title">Women’s Scarf</h5>
+                    <p class="card-text">Soft, stylish, and affordable.</p>
+                    <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#buyModal7">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <!-- Card 8 -->
+        <div class="col-sm-6 col-lg-3">
+            <div class="card h-100">
+                <img src="https://img.lazcdn.com/g/p/ca9b4e3a4217e2554adb66c8c19d986a.jpg_720x720q80.jpg" class="card-img-top" alt="Product 8">
+                <div class="card-body">
+                    <h5 class="card-title">Kids Backpack</h5>
+                    <p class="card-text">Colorful and durable for school goers.</p>
+                    <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#buyModal8">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Buy Now & Payment Modals (Bootstrap Only, No JS) -->
+<!-- Repeat this modal structure for each product for unique IDs -->
+
+<!-- Modal Template (repeat for each product, only IDs change) -->
+<!-- Modal 1 -->
+<div class="modal fade" id="buyModal1" tabindex="-1" aria-labelledby="buyModal1Label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="buyModal1Label">Buy Stylish Sunglasses</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="mb-3">Are you sure you want to buy <strong>Stylish Sunglasses</strong>?</p>
+        <button class="btn btn-success w-100" data-bs-target="#paymentModal1" data-bs-toggle="modal" data-bs-dismiss="modal">Proceed to Payment</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="paymentModal1" tabindex="-1" aria-labelledby="paymentModal1Label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="paymentModal1Label">Payment Successful!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <div class="mb-3">
+          <svg width="56" height="56" fill="#28a745" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM7 10.586L4.707 8.293a1 1 0 0 0-1.414 1.414l3 3a1 1 0 0 0 1.414 0l6-6a1 1 0 0 0-1.414-1.414L7 10.586z"></path></svg>
+        </div>
+        <h4 class="mb-2">Thank you for your purchase!</h4>
+        <p>Your payment for <strong>Stylish Sunglasses</strong> was successful.</p>
+        <button class="btn btn-outline-success" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Repeat for 2 - 8 with unique IDs and product names -->
+<!-- Modal 2 -->
+<div class="modal fade" id="buyModal2" tabindex="-1" aria-labelledby="buyModal2Label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="buyModal2Label">Buy Classic Wrist Watch</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="mb-3">Are you sure you want to buy <strong>Classic Wrist Watch</strong>?</p>
+        <button class="btn btn-success w-100" data-bs-target="#paymentModal2" data-bs-toggle="modal" data-bs-dismiss="modal">Proceed to Payment</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="paymentModal2" tabindex="-1" aria-labelledby="paymentModal2Label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="paymentModal2Label">Payment Successful!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <div class="mb-3">
+          <svg width="56" height="56" fill="#28a745" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM7 10.586L4.707 8.293a1 1 0 0 0-1.414 1.414l3 3a1 1 0 0 0 1.414 0l6-6a1 1 0 0 0-1.414-1.414L7 10.586z"></path></svg>
+        </div>
+        <h4 class="mb-2">Thank you for your purchase!</h4>
+        <p>Your payment for <strong>Classic Wrist Watch</strong> was successful.</p>
+        <button class="btn btn-outline-success" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal 3 -->
+<div class="modal fade" id="buyModal3" tabindex="-1" aria-labelledby="buyModal3Label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="buyModal3Label">Buy Leather Handbag</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="mb-3">Are you sure you want to buy <strong>Leather Handbag</strong>?</p>
+        <button class="btn btn-success w-100" data-bs-target="#paymentModal3" data-bs-toggle="modal" data-bs-dismiss="modal">Proceed to Payment</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="paymentModal3" tabindex="-1" aria-labelledby="paymentModal3Label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="paymentModal3Label">Payment Successful!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <div class="mb-3">
+          <svg width="56" height="56" fill="#28a745" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM7 10.586L4.707 8.293a1 1 0 0 0-1.414 1.414l3 3a1 1 0 0 0 1.414 0l6-6a1 1 0 0 0-1.414-1.414L7 10.586z"></path></svg>
+        </div>
+        <h4 class="mb-2">Thank you for your purchase!</h4>
+        <p>Your payment for <strong>Leather Handbag</strong> was successful.</p>
+        <button class="btn btn-outline-success" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal 4 -->
+<div class="modal fade" id="buyModal4" tabindex="-1" aria-labelledby="buyModal4Label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="buyModal4Label">Buy Running Shoes</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="mb-3">Are you sure you want to buy <strong>Running Shoes</strong>?</p>
+        <button class="btn btn-success w-100" data-bs-target="#paymentModal4" data-bs-toggle="modal" data-bs-dismiss="modal">Proceed to Payment</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="paymentModal4" tabindex="-1" aria-labelledby="paymentModal4Label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="paymentModal4Label">Payment Successful!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <div class="mb-3">
+          <svg width="56" height="56" fill="#28a745" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM7 10.586L4.707 8.293a1 1 0 0 0-1.414 1.414l3 3a1 1 0 0 0 1.414 0l6-6a1 1 0 0 0-1.414-1.414L7 10.586z"></path></svg>
+        </div>
+        <h4 class="mb-2">Thank you for your purchase!</h4>
+        <p>Your payment for <strong>Running Shoes</strong> was successful.</p>
+        <button class="btn btn-outline-success" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal 5 -->
+<div class="modal fade" id="buyModal5" tabindex="-1" aria-labelledby="buyModal5Label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="buyModal5Label">Buy Smart Headphones</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="mb-3">Are you sure you want to buy <strong>Smart Headphones</strong>?</p>
+        <button class="btn btn-success w-100" data-bs-target="#paymentModal5" data-bs-toggle="modal" data-bs-dismiss="modal">Proceed to Payment</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="paymentModal5" tabindex="-1" aria-labelledby="paymentModal5Label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="paymentModal5Label">Payment Successful!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <div class="mb-3">
+          <svg width="56" height="56" fill="#28a745" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM7 10.586L4.707 8.293a1 1 0 0 0-1.414 1.414l3 3a1 1 0 0 0 1.414 0l6-6a1 1 0 0 0-1.414-1.414L7 10.586z"></path></svg>
+        </div>
+        <h4 class="mb-2">Thank you for your purchase!</h4>
+        <p>Your payment for <strong>Smart Headphones</strong> was successful.</p>
+        <button class="btn btn-outline-success" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal 6 -->
+<div class="modal fade" id="buyModal6" tabindex="-1" aria-labelledby="buyModal6Label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="buyModal6Label">Buy Cotton T-shirt</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="mb-3">Are you sure you want to buy <strong>Cotton T-shirt</strong>?</p>
+        <button class="btn btn-success w-100" data-bs-target="#paymentModal6" data-bs-toggle="modal" data-bs-dismiss="modal">Proceed to Payment</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="paymentModal6" tabindex="-1" aria-labelledby="paymentModal6Label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="paymentModal6Label">Payment Successful!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <div class="mb-3">
+          <svg width="56" height="56" fill="#28a745" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM7 10.586L4.707 8.293a1 1 0 0 0-1.414 1.414l3 3a1 1 0 0 0 1.414 0l6-6a1 1 0 0 0-1.414-1.414L7 10.586z"></path></svg>
+        </div>
+        <h4 class="mb-2">Thank you for your purchase!</h4>
+        <p>Your payment for <strong>Cotton T-shirt</strong> was successful.</p>
+        <button class="btn btn-outline-success" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal 7 -->
+<div class="modal fade" id="buyModal7" tabindex="-1" aria-labelledby="buyModal7Label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="buyModal7Label">Buy Women’s Scarf</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="mb-3">Are you sure you want to buy <strong>Women’s Scarf</strong>?</p>
+        <button class="btn btn-success w-100" data-bs-target="#paymentModal7" data-bs-toggle="modal" data-bs-dismiss="modal">Proceed to Payment</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="paymentModal7" tabindex="-1" aria-labelledby="paymentModal7Label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="paymentModal7Label">Payment Successful!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <div class="mb-3">
+          <svg width="56" height="56" fill="#28a745" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM7 10.586L4.707 8.293a1 1 0 0 0-1.414 1.414l3 3a1 1 0 0 0 1.414 0l6-6a1 1 0 0 0-1.414-1.414L7 10.586z"></path></svg>
+        </div>
+        <h4 class="mb-2">Thank you for your purchase!</h4>
+        <p>Your payment for <strong>Women’s Scarf</strong> was successful.</p>
+        <button class="btn btn-outline-success" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal 8 -->
+<div class="modal fade" id="buyModal8" tabindex="-1" aria-labelledby="buyModal8Label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="buyModal8Label">Buy Kids Backpack</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="mb-3">Are you sure you want to buy <strong>Kids Backpack</strong>?</p>
+        <button class="btn btn-success w-100" data-bs-target="#paymentModal8" data-bs-toggle="modal" data-bs-dismiss="modal">Proceed to Payment</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="paymentModal8" tabindex="-1" aria-labelledby="paymentModal8Label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="paymentModal8Label">Payment Successful!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <div class="mb-3">
+          <svg width="56" height="56" fill="#28a745" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM7 10.586L4.707 8.293a1 1 0 0 0-1.414 1.414l3 3a1 1 0 0 0 1.414 0l6-6a1 1 0 0 0-1.414-1.414L7 10.586z"></path></svg>
+        </div>
+        <h4 class="mb-2">Thank you for your purchase!</h4>
+        <p>Your payment for <strong>Kids Backpack</strong> was successful.</p>
+        <button class="btn btn-outline-success" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="mt-5">
+    <div class="container">
+        <div class="row mb-4">
+            <div class="col-md-4 mb-3">
+                <h5 class="fw-bold text-white">ShopEase</h5>
+                <p>Your one-stop shop for fashion & accessories. Experience style like never before!</p>
+            </div>
+            <div class="col-md-2 mb-3">
+                <h6 class="text-uppercase mb-3">Quick Links</h6>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="footer-link">Home</a></li>
+                    <li><a href="#" class="footer-link">Men</a></li>
+                    <li><a href="#" class="footer-link">Women</a></li>
+                    <li><a href="#" class="footer-link">Kids</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2 mb-3">
+                <h6 class="text-uppercase mb-3">Customer Care</h6>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="footer-link">Contact Us</a></li>
+                    <li><a href="#" class="footer-link">FAQs</a></li>
+                    <li><a href="#" class="footer-link">Returns</a></li>
+                    <li><a href="#" class="footer-link">Track Order</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 mb-3">
+                <h6 class="text-uppercase mb-3">Stay Connected</h6>
+                <p>
+                      <a href="#" class="footer-link me-2"><svg width="20" height="20" fill="#fff" viewBox="0 0 16 16"><path d="M5.026 15c6.038 0 9.341-5 9.341-9.334 0-.14 0-.282-.01-.423A6.685 6.685 0 0 0 16 3.542a6.58 6.58 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.084.797A3.286 3.286 0 0 0 7.88 6.034a9.325 9.325 0 0 1-6.767-3.429A3.289 3.289 0 0 0 2.219 7.13a3.323 3.323 0 0 1-1.487-.41v.041a3.288 3.288 0 0 0 2.633 3.218 3.203 3.203 0 0 1-.865.115c-.211 0-.417-.02-.616-.058a3.293 3.293 0 0 0 3.067 2.277A6.587 6.587 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/></svg></a>
+                      
+                        <a href="https://instagram.com" target="_blank" class="text-white" aria-label="Instagram">
+      <!-- Instagram SVG -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" class="bi bi-instagram" viewBox="0 0 16 16">
+        <path d="M8 0C5.74 0 5.332.014 4.488.072 3.644.13 3.042.276 2.49.521a4.92 4.92 0 0 0-1.75 1.127A4.92 4.92 0 0 0 .522 3.49c-.245.552-.391 1.154-.449 1.998C.014 5.333 0 5.74 0 8s.014 2.667.072 3.511c.058.844.204 1.446.449 1.998a4.92 4.92 0 0 0 1.127 1.75 4.92 4.92 0 0 0 1.75 1.127c.552.245 1.154.391 1.998.449C5.333 15.986 5.74 16 8 16s2.667-.014 3.511-.072c.844-.058 1.446-.204 1.998-.449a4.92 4.92 0 0 0 1.75-1.127 4.92 4.92 0 0 0 1.127-1.75c.245-.552.391-1.154.449-1.998C15.986 10.667 16 10.26 16 8s-.014-2.667-.072-3.511c-.058-.844-.204-1.446-.449-1.998a4.92 4.92 0 0 0-1.127-1.75 4.92 4.92 0 0 0-1.75-1.127c-.552-.245-1.154-.391-1.998-.449C10.667.014 10.26 0 8 0zM8 1.44c2.188 0 2.452.008 3.316.048.805.037 1.243.173 1.533.288.388.151.664.332.956.623.29.29.472.568.623.956.115.29.251.728.288 1.533.04.864.048 1.128.048 3.316s-.008 2.452-.048 3.316c-.037.805-.173 1.243-.288 1.533a2.778 2.778 0 0 1-.623.956 2.778 2.778 0 0 1-.956.623c-.29.115-.728.251-1.533.288-.864.04-1.128.048-3.316.048s-2.452-.008-3.316-.048c-.805-.037-1.243-.173-1.533-.288a2.778 2.778 0 0 1-.956-.623 2.778 2.778 0 0 1-.623-.956c-.115-.29-.251-.728-.288-1.533C1.448 10.452 1.44 10.188 1.44 8s.008-2.452.048-3.316c.037-.805.173-1.243.288-1.533.151-.388.332-.664.623-.956.29-.29.568-.472.956-.623.29-.115.728-.251 1.533-.288C5.548 1.448 5.812 1.44 8 1.44zM8 3.889a4.111 4.111 0 1 0 0 8.222 4.111 4.111 0 0 0 0-8.222zm0 6.778a2.667 2.667 0 1 1 0-5.334 2.667 2.667 0 0 1 0 5.334zm4.271-6.909a.96.96 0 1 1-1.92 0 .96.96 0 0 1 1.92 0z"/>
+      </svg>
+    </a>
+                </p>
+                <form class="d-flex flex-column">
+                    <input type="email" class="form-control mb-2" placeholder="Subscribe to newsletter">
+                    <button class="btn btn-outline-light" type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="text-center border-top pt-3">&copy; 2025 ShopEase. All rights reserved.</div>
+    </div>
+</footer>
+
+<!-- Bootstrap 5 JS Bundle (with Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bootstrap Buttons</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body class="p-4">
+
+  <h2>Bootstrap Buttons Example</h2>
+
+  <!-- Standard Buttons -->
+  <button type="button" class="btn btn-primary">Primary</button>
+  <button type="button" class="btn btn-secondary">Secondary</button>
+  <button type="button" class="btn btn-success">Success</button>
+  <button type="button" class="btn btn-danger">Danger</button>
+  <button type="button" class="btn btn-warning">Warning</button>
+  <button type="button" class="btn btn-info">Info</button>
+  <button type="button" class="btn btn-light">Light</button>
+  <button type="button" class="btn btn-dark">Dark</button>
+  <button type="button" class="btn btn-link">Link</button>
+
+  <br><br>
+
+  <!-- Outline Buttons -->
+  <button type="button" class="btn btn-outline-primary">Primary</button>
+  <button type="button" class="btn btn-outline-secondary">Secondary</button>
+
+  <br><br>
+
+  <!-- Button Sizes -->
+  <button type="button" class="btn btn-primary btn-lg">Large Button</button>
+  <button type="button" class="btn btn-primary btn-sm">Small Button</button>
+
+  <br><br>
+
+  <!-- Block Button (Full Width) -->
+  <button type="button" class="btn btn-success w-100">Block Button</button>
+
+
+
+
+  <!--  button groups   -->
+
+  <div class="container">
+  <h2>Button Group</h2>
+  <p>The .btn-group class creates a button group:</p>
+  <div class="btn-group">
+    <button type="button" class="btn btn-primary">Apple</button>
+    <button type="button" class="btn btn-primary">Samsung</button>
+    <button type="button" class="btn btn-primary">Sony</button>
+  </div>
+</div>
+
+<br>
+<br>
+
+
+<h2>Bootstrap 4 Table</h2>
+
+  <table class="table">
+    <!-- <thead class="thead-dark"> -->
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Number</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>1</th>
+        <td>John Doe</td>
+        <td>john@example.com</td>
+        <td>91-99729+37645</td>
+      </tr>
+      <tr>
+        <th>2</th>
+        <td>Jane Smith</td>
+        <td>jane@example.com</td>
+        <td>91-84774+38353</td>
+      </tr>
+      <tr>
+        <th>3</th>
+        <td>Sam Brown</td>
+        <td>sam@example.com</td>
+        <td>91-88579+45283</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+
+  <br>
+  <br>
+  <br>
+
+
+
+  <h2>Full Bordered Table</h2>
+
+   <table class="table table-bordered table-hover">
+    <thead class="thead-dark">
+      <tr>
+        <th>#</th>
+        <th>Product</th>
+        <th>Quantity</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Apple</td>
+        <td>10</td>
+        <td>$5</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Banana</td>
+        <td>6</td>
+        <td>$3</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Orange</td>
+        <td>8</td>
+        <td>$4</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+
+
+  <h2>
+    forms
+  </h2>
+
+
+
+  <div class="container mt-6">
+    <form class="border p-5 shadow bg-light rounded">
+      <div class="row">
+        <!-- Left Form -->
+        <div class="col-md-5">
+          <div class="mb-4">
+            <p>Name :</p>
+            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+          </div>
+          <div class="mb-4">
+            <p>
+              Phone Number  :
+            </p>
+            <input type="tel" class="form-control" id="phone" placeholder="Enter your phone">
+          </div>
+
+
+
+          <div class="mb-3">
+              <p>
+                Class :
+              </p>
+            <select class="form-select" id="class">
+              <option disabled selected>Select Class</option>
+              <option value="BCA">BCA</option>
+              <option value="MBA">MBA</option>
+              <option value="MCA">MCA</option>
+              <option value="BTech">BTech</option>
+            </select>
+          </div>
+        </div>
+
+
+
+      
+        
+
+        <!-- Right Form -->
+        <div class="col-md-5">
+          <div class="mb-4">
+           <p>
+            Email :
+           </p>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+          </div>
+          <div class="mb-3">
+           <p>
+            Subject :
+           </p>
+            <input type="text" class="form-control" id="subject" placeholder="Enter subject">
+          </div>
+          <div class="mb-3">
+          <p>
+            Roll-No :
+          </p>
+            <input type="text" class="form-control" id="rollno" placeholder="Enter roll number">
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="row mt-5">
+        <div class="col-12">
+          <div class="mb-3">
+<p>
+  message  :
+</p>
+            <textarea class="form-control" id="message" rows="4" placeholder="Write your message here"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+ 
+
+
+
+
+  
+
+</body>
+</html>

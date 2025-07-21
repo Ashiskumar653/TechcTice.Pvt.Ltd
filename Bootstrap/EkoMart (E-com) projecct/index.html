@@ -1,0 +1,1496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ekomart Header</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+
+  <style>
+    /* Top bar styling */
+    .top-bar {
+      background-color: #6aaa2c;
+      color: white;
+      font-size: 14px;
+      padding: 5px 0;
+    }
+
+    .top-bar .right-text {
+      text-align: right;
+    }
+
+    .nav-link {
+      position: relative;
+      padding: 10px 15px;
+    }
+
+    .nav-link:hover {
+      background-color: #2c9148;
+      color: #eaede6 !important;
+    }
+
+    .dropdown:hover .dropdown-menu {
+      display: block;
+      margin-top: 0;
+    }
+
+    .search-box input {
+      border-radius: 0;
+    }
+
+    .search-btn {
+      background-color: #6aaa2c;
+      color: white;
+      border: none;
+    }
+
+    .search-btn:hover {
+      background-color: #5b9625;
+    }
+
+    .btn-outline {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-left: 10px;
+    }
+
+    .btn-outline:hover {
+      background-color: #10ae18;
+    }
+
+    .discount-badge {
+      background-color: #6aaa2c;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 0 0 0 15px;
+    }
+
+
+    
+.dropdown-mega {
+  position: absolute;
+  left: 0;
+  /* width: 100%; */
+  top: 100%;
+  padding: 40px;
+  background-color: white;
+  border-top: 3px solid #6aaa2c;
+  display: none;
+  z-index: 9999;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.nav-item:hover .dropdown-mega {
+  display: flex;
+}
+
+.dropdown-mega .column {
+  flex: 5px;
+  padding: 20px;
+}
+
+.dropdown-mega h6 {
+  font-weight: bold;
+  color: #6aaa2c;
+  margin-bottom: 10px;
+}
+
+.dropdown-mega a {
+  display: block;
+  color: #000;
+  padding: 5px 0;
+  text-decoration: none;
+}
+
+.dropdown-mega a:hover {
+  color: #42780c;
+}
+
+.dropdown-mega .promo-box {
+  background: #fef6e7;
+  padding: 20px;
+  text-align: center;
+  flex: 1;
+  max-width: 300px;
+}
+
+.dropdown-mega .promo-box img {
+  max-width: 200px;
+}
+
+
+.carousel-caption {
+  
+  text-align: center;
+  padding: 30px;
+}
+
+.carousel-caption h1 {
+  font-size: 2.5rem;
+  color: #f6f9f5;
+}
+
+.carousel-caption p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.carousel-caption .btn {
+  font-weight: bold;
+}
+
+.blur-arrow {
+
+  border-radius: 50%;
+  padding: 15px;
+  transition: all 0.3s ease;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+}
+
+
+  .product-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    background: white;
+  }
+
+  .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+  }
+
+  .product-card img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+  }
+
+
+  .product-card {
+    transition: 0.3s;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: white;
+  }
+
+  .product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .scroll-row {
+    white-space: nowrap;
+    padding: 10px 0;
+    scroll-behavior: smooth;
+  }
+
+  .scroll-zone {
+    position: absolute;
+    top: 0;
+    width: 60px;
+    height: 100%;
+    z-index: 10;
+  }
+
+  #hover-left {
+    left: 0;
+  }
+
+  #hover-right {
+    right: 0;
+  }
+
+  #hover-left:hover,
+  #hover-right:hover {
+    cursor: pointer;
+  }
+
+
+
+.card{
+    margin: 3px;
+    font-size: 15px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    /* display: flex; */
+    height: 320px;
+    width: 300px;
+  }
+  .card img{
+    max-width: 100%;
+    height: 150px;
+    width: 150px;
+    
+  }
+  .card:hover{
+     background-color: #e9f5ff;
+    cursor: pointer;
+    transform: scale(1.01);
+  }
+
+  /* Discounts */
+  #Discounts{
+    background-color: rgb(102, 153, 51);
+    color: white;
+    padding: 5px;
+  }
+  #product_discount{
+    border: 1px solid red;
+    height: 450px;
+    width: 97%;
+    max-width: 100%;
+    border-radius: 5px;
+    background-color: rgb(246, 239, 239);
+  }
+  #juice{
+    background-image: url(	https://ekomart-nextjs.vercel.app/assets/images/discount-product/01.jpg);
+
+    height: 200px;
+    background-repeat: no-repeat;
+    border-radius: 10px 10px 10px 10px;
+  }
+  #chicken{
+    background-image: url(https://ekomart-nextjs.vercel.app/assets/images/discount-product/02.jpg);
+
+    height: 200px;
+    background-repeat: no-repeat;
+    border-radius: 10px 10px 10px 10px;
+  }
+  #perduct_card{
+    height: 200px;
+    border: 1px solid rgb(241, 174, 174);
+    border-radius: 10px;    
+  }
+
+  /* Weekly Best Selling Groceries */
+  #Weekly_Best_Selling{
+    color: black;
+    background-color: rgb(245, 234, 213);
+    border-radius: 25px;
+    font-weight: bold;
+  }
+  #Weekly_Best_Selling:hover{
+    background-color: rgb(102, 153, 51);
+  }
+  .first{
+    background-color: rgb(102, 153, 51) !important;
+    color: white !important;
+  }
+  #Groceries{
+    height: 20px;
+    width: 20px;
+  }
+  #Groceries1{
+    border: 1px solid rgb(251, 208, 208);
+    text-decoration: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: black;
+  }
+  #Groceries1:hover{
+    background-color: rgb(102, 153, 51) !important;
+  }
+  /* Weekend discount */
+  .Weekend_discount{
+    border: 1px solid black;
+    height: 450px;
+    width: 450px;
+    border-radius: 10px;
+   
+  }
+  #Weekend_discount_1{
+     background-image: url(https://ekomart-nextjs.vercel.app/assets/images/category/01.jpg);
+     background-repeat: no-repeat;
+     background-size: 450px 450px;
+  }
+  #Weekend_discount_2{
+     background-image: url(	https://ekomart-nextjs.vercel.app/assets/images/category/02.jpg);
+     background-repeat: no-repeat;
+     background-size: 450px 450px;
+  }
+  #Weekend_discount_3{
+     background-image: url(https://ekomart-nextjs.vercel.app/assets/images/category/03.jpg);
+     background-repeat: no-repeat;
+     background-size: 450px 450px;
+  }
+  #Weekend_button{
+    margin: 30px 0px 0px 30px;
+  }
+
+  /* Top_Trending_Products */
+  #Top_Trending_Products{
+    height: 365px;
+    border-radius: 10px;
+    background-color: rgb(227, 227, 227);
+  }
+  #Top_Trending_Products_button_2{
+    text-decoration: line-through;
+    font-weight: 500;
+    color: black;
+  }
+  #Top_Trending_Products_button{
+    font-weight: bold;
+    color: red;
+  }
+  #Top_Trending_Products_button:hover{
+    color: rgb(102, 153, 51) !important;
+  }
+  #Top_Trending_Products_card{
+    height: 150px;
+  }
+  
+  /* Latest_Blog_Post_Insights */
+  #Latest_Blog_Post_Insights{
+    height: 370px;
+    border-radius: 10px;
+    background-color: rgb(227, 227, 227);
+  }
+  #Latest_Blog_Post_Insights_img{
+    width: 100%;
+  }
+  #Latest_Blog_Post_Insights_img_box{
+    display: block;
+    overflow: hidden;
+  }
+  #blog_full_body:hover{
+    background-color: white !important;
+    cursor: pointer;
+    transform: none !important;
+  }
+  #Latest_Blog_Post_Insights_img:hover{
+    scale: 1.1;
+    transition: .5s;    
+  }
+  #Latest_Blog_text{
+    font-weight: bold;
+  }
+  #Latest_Blog_text img{
+    width: 30px;
+    height: 30px;
+  }
+  #blog_full_body{
+    margin: 25px 5px 25px 5px;
+  }
+  
+  /* footer */
+
+    .footer {
+      background-color: #f8f9fa;
+      padding: 40px 0;
+      font-size: 15px;
+      color: #444;
+      
+    }
+    .footer h5 {
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .footer a {
+      color: #666;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    .footer .phone-number {
+      color: #4caf50;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .footer .icon-circle {
+      background-color: #eaeaea;
+      width: 35px;
+      height: 35px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+    .footer .social-icons a {
+      margin-right: 15px;
+      color: #444;
+    }
+    .footer-bottom {
+      background-color: #f1f1f1;
+      padding: 15px 0;
+      font-size: 14px;
+      text-align: center;
+    }
+    .payment-icons img {
+      height: 30px;
+      margin-right: 10px;
+    }
+    .app-download img {
+      height: 40px;
+      margin: 0 5px;
+    }
+  
+
+  /* product scroll section */
+  .category-icon {
+    margin: 15px;
+    font-size: 24px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    /* transition: transform 0.3s ease; */
+  }
+
+  .category-icon:hover {
+    background-color: #e9f5ff;
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+  
+
+
+  </style>
+</head>
+<body>
+
+  <!-- Top Notification Bar -->
+  <div class="top-bar container-fluid">
+    <div class="row">
+      <div class="col-md-8">
+        <span>FREE delivery & 40% Discount for next 3 orders! Place your 1st order in. <strong>88 Days 21 Hours 08 Min 23 Sec</strong></span>
+      </div>
+      <div class="col-md-4 right-text">
+        <span>Need help? Call Us: +258 3268 21485</span>
+      </div>
+    </div>
+  </div>
+
+<div class="container border-bottom py-1 d-flex justify-content-between align-items-center flex-wrap" style="font-size: 15px;">
+    <div class="d-flex gap-3 flex-wrap">
+      <a href="#" class="text-secondary text-decoration-none">About Us</a>
+      <a href="#" class="text-secondary text-decoration-none">My Account</a>
+      <a href="#" class="text-secondary text-decoration-none">Wishlist</a>
+      <span class="d-none d-md-inline-block border-start ms-3 ps-3 text-secondary">We deliver to your everyday from 7:00 to 22:00</span>
+    </div>
+    <div class="d-flex gap-3 flex-wrap">
+      <div class="dropdown">
+        <a class="dropdown-toggle text-secondary text-decoration-none" href="#" role="button" data-bs-toggle="dropdown">English</a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">English</a></li>
+          <li><a class="dropdown-item" href="#">Español</a></li>
+        </ul>
+      </div>
+      <div class="dropdown">
+        <a class="dropdown-toggle text-secondary text-decoration-none" href="#" role="button" data-bs-toggle="dropdown">USD</a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">USD</a></li>
+          <li><a class="dropdown-item" href="#">EUR</a></li>
+        </ul>
+      </div>
+      <a href="#" class="text-secondary text-decoration-none">Track Order</a>
+    </div>
+  </div>
+
+
+  <!-- Top Links and Search -->
+  <div class="container py-2 d-flex justify-content-between align-items-center flex-wrap">
+    <div class="d-flex align-items-center">
+      <img src="https://ekomart-nextjs.vercel.app/assets/images/logo/logo-01.svg" alt="Logo" width="200"  />
+      
+    </div>
+
+    <div class="search-box d-flex flex-grow-1 mx-3">
+      <input type="text" class="form-control" placeholder="Search for products, categories..." />
+      <button class="search-btn px-4">Search</button>
+    </div>
+
+    <div>
+      <button class="btn btn-outline">Account</button>
+      <button class="btn btn-outline">Wishlist</button>
+      <button class="btn btn-outline">Cart</button>
+    </div>
+  </div>
+
+  <!-- Navigation Menu -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#">About</a>
+            <ul class="dropdown-menu">
+              <li class="nav-item position-relative">
+
+  <div class="dropdown-mega d-none d-lg-flex">
+    <div class="container d-flex">
+      <div class="column">
+        <h6>Company</h6>
+        <a href="#">Our Story</a>
+        <a href="#">Mission & Vision</a>
+      </div>
+      <div class="column">
+        <h6>Team</h6>
+        <a href="#">Leadership</a>
+        <a href="#">Careers</a>
+      </div>
+    </div>
+  </div>
+</li>
+
+
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#">Shop</a>
+            <ul class="dropdown-menu">
+              <li class="nav-item position-relative">
+
+  <div class="dropdown-mega d-none d-lg-flex">
+    <div class="container d-flex">
+      <div class="column">
+        <h6>Shop Layout</h6>
+        <a href="#">Shop Grid Sidebar</a>
+        <a href="#">Shop list Sidebar</a>
+        <a href="#">Shop Top Filter Grid</a>
+        <a href="#">Shop Top Filter List</a>
+      </div>
+      <div class="column">
+        <h6>Shop Details</h6>
+        <a href="#">Shop Details</a>
+        <a href="#">Shop Details V2</a>
+        <a href="#">Shop Details V3</a>
+        <a href="#">Shop Details V4</a>
+      </div>
+      <div class="column">
+        <h6>Product Feature</h6>
+        <a href="#">Variable Product</a>
+        <a href="#">Affiliate Product</a>
+        <a href="#">Shop Compare</a>
+      </div>
+      <div class="column">
+        <h6>Shop Others</h6>
+        <a href="#">Cart</a>
+        <a href="#">Checkout</a>
+        <a href="#">Track Order</a>
+      </div>
+      <div class="promo-box">
+        <p><strong>Everyday Fresh & Clean with Our Products</strong></p>
+        <button class="btn btn-success btn-sm">Read Details</button>
+        <img src="https://ekomart-nextjs.vercel.app/assets/images/about/02.jpg" alt="ex">
+      </div>
+    </div>
+  </div>
+</li>
+
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Vendors</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#">Pages</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Login</a></li>
+              <li><a class="dropdown-item" href="#">Register</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Dashboard <span class="badge bg-success ms-1">New</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+        </ul>
+        <div class="d-flex">
+          <span class="discount-badge">Get 30% Discount Now <strong>Sale</strong></span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ✅ Carousel with Text & Button -->
+<div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="2000">
+
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://ekomart-nextjs.vercel.app/assets/images/banner/01.webp" class="d-block w-100" alt="Banner 1">
+      <div class="carousel-caption d-flex flex-column align-items-center justify-content-center h-100 text-dark">
+        <h1 >Fresh Organic Products</h1>
+        <p class="lead">Delivered directly to your door</p>
+        <a href="#" class="btn btn-success btn-lg mt-3 px-4">Shop Now</a>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://ekomart-nextjs.vercel.app/assets/images/banner/08.webp" class="d-block w-100" alt="Banner 2">
+      <div class="carousel-caption d-flex flex-column align-items-center justify-content-center h-100 text-dark">
+        <h1 class="fw-bold display-4">Eat Fresh, Live Healthy</h1>
+        <p class="lead">Best deals on seasonal fruits</p>
+        <a href="#" class="btn btn-success btn-lg mt-3 px-4">Shop Now</a>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://ekomart-nextjs.vercel.app/assets/images/banner/01.webp" class="d-block w-100" alt="Banner 3">
+      <div class="carousel-caption d-flex flex-column align-items-center justify-content-center h-100 text-dark">
+        <h1 class="fw-bold display-4">Eco-Friendly Packaging</h1>
+        <p class="lead">Sustainable and safe for the planet</p>
+        <a href="#" class="btn btn-success btn-lg mt-3 px-4">Shop Now</a>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://ekomart-nextjs.vercel.app/assets/images/banner/08.webp" class="d-block w-100" alt="Banner 4">
+      <div class="carousel-caption d-flex flex-column align-items-center justify-content-center h-100 text-dark">
+        <h1 class="fw-bold display-4">Fast & Free Delivery</h1>
+        <p class="lead">Order now and get it within 24 hours</p>
+        <a href="#" class="btn btn-success btn-lg mt-3 px-4">Shop Now</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation Buttons -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon blur-arrow" aria-hidden="true"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon blur-arrow" aria-hidden="true"></span>
+  </button>
+</div>
+
+<!-- Horizontal Scrollable Product Cards -->
+<div class="container my-5">
+  <h4 class="mb-4">Shop By Category</h4>
+  <div class="d-flex overflow-auto flex-nowrap gap-3 px-2">
+    <!-- Repeat this card 15 times -->
+    <div class="card text-center product-card" style="min-width: 140px;" title="Organic & Fresh">
+      <img src="https://ekomart-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimages%2Fcategory%2F09.png&w=128&q=75" class="card-img-top mx-auto mt-3" alt="Product">
+      <div class="card-body">
+        <small class="card-title fw-semibold">Organic Vegetable</small>
+      </div>
+    </div>
+
+    <!-- Duplicate 14 more times -->
+    <div class="card text-center product-card" style="min-width: 140px;" title="Rich in Vitamins">
+      <img src="https://thumbs.dreamstime.com/b/broccoli-vegetable-separate-isolated-white-background-as-package-design-element-70541199.jpg" class="card-img-top mx-auto mt-3" alt="Product">
+      <div class="card-body">
+        <small class="card-title fw-semibold">Organic Vegetable</small>
+      </div>
+    </div>
+
+    <div class="card text-center product-card" style="min-width: 140px;" title="Rich in Vitamins">
+      <img src="https://easyenglishpath.com/wp-content/uploads/2023/10/vege-2-14.png" class="card-img-top mx-auto mt-3" alt="Product">
+      <div class="card-body">
+        <small class="card-title fw-semibold">Organic Vegetable</small>
+      </div>
+    </div>
+
+    <div class="card text-center product-card" style="min-width: 140px;" title="Rich in Vitamins">
+      <img src="https://easyenglishpath.com/wp-content/uploads/2023/10/vege-1-7.png" class="card-img-top mx-auto mt-3" alt="Product">
+      <div class="card-body">
+        <small class="card-title fw-semibold">Organic Vegetable</small>
+      </div>
+    </div>
+
+    <div class="card text-center product-card" style="min-width: 140px;" title="Rich in Vitamins">
+      <img src="https://easyenglishpath.com/wp-content/uploads/2023/10/vege-1-1.png" class="card-img-top mx-auto mt-3" alt="Product">
+      <div class="card-body">
+        <small class="card-title fw-semibold">Organic Vegetable</small>
+      </div>
+    </div>
+
+    <div class="card text-center product-card" style="min-width: 140px;" title="Rich in Vitamins">
+      <img src="https://easyenglishpath.com/wp-content/uploads/2023/10/vege-5-7.png" class="card-img-top mx-auto mt-3" alt="Product">
+      <div class="card-body">
+        <small class="card-title fw-semibold">Organic Vegetable</small>
+      </div>
+    </div>
+
+    <div class="card text-center product-card" style="min-width: 140px;" title="Rich in Vitamins">
+      <img src="https://easyenglishpath.com/wp-content/uploads/2023/10/Slide6.png" class="card-img-top mx-auto mt-3" alt="Product">
+      <div class="card-body">
+        <small class="card-title fw-semibold">Organic Vegetable</small>
+      </div>
+    </div>
+     
+     <div class="card text-center product-card" style="min-width: 140px;" title="Rich in Vitamins">
+      <img src="https://easyenglishpath.com/wp-content/uploads/2023/10/vege-2-1.png" class="card-img-top mx-auto mt-3" alt="Product">
+      <div class="card-body">
+        <small class="card-title fw-semibold">Organic Vegetable</small>
+      </div>
+    </div>
+    
+     <div class="card text-center product-card" style="min-width: 140px;" title="Rich in Vitamins">
+      <img src="https://easyenglishpath.com/wp-content/uploads/2023/10/vege-4-16.png" class="card-img-top mx-auto mt-3" alt="Product">
+      <div class="card-body">
+        <small class="card-title fw-semibold">Organic Vegetable</small>
+      </div>
+    </div>
+    
+      <div class="card text-center product-card" style="min-width: 140px;" title="Rich in Vitamins">
+      <img src="https://easyenglishpath.com/wp-content/uploads/2023/10/vege-1-1.png" class="card-img-top mx-auto mt-3" alt="Product">
+      <div class="card-body">
+        <small class="card-title fw-semibold">Organic Vegetable</small>
+      </div>
+    </div>
+
+    <div class="card text-center product-card" style="min-width: 140px;" title="Rich in Vitamins">
+      <img src="https://easyenglishpath.com/wp-content/uploads/2023/10/vege-5-7.png" class="card-img-top mx-auto mt-3" alt="Product">
+      <div class="card-body">
+        <small class="card-title fw-semibold">Organic Vegetable</small>
+      </div>
+    </div>
+
+    <div class="card text-center product-card" style="min-width: 140px;" title="Rich in Vitamins">
+      <img src="https://easyenglishpath.com/wp-content/uploads/2023/10/Slide6.png" class="card-img-top mx-auto mt-3" alt="Product">
+      <div class="card-body">
+        <small class="card-title fw-semibold">Organic Vegetable</small>
+      </div>
+    </div>
+     
+     <div class="card text-center product-card" style="min-width: 140px;" title="Rich in Vitamins">
+      <img src="https://easyenglishpath.com/wp-content/uploads/2023/10/vege-2-1.png" class="card-img-top mx-auto mt-3" alt="Product">
+      <div class="card-body">
+        <small class="card-title fw-semibold">Organic Vegetable</small>
+      </div>
+    </div>
+    
+
+  
+  </div>
+</div>
+
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<div class="container my-5">
+  <h4 class="mb-4">Shop by Category</h4>
+
+  <!-- Hover scroll container -->
+  <div class="position-relative">
+    <!-- Scrollable row -->
+    <div class="d-flex overflow-x-auto scroll-row" id="scrollCards">
+      <!-- Repeat cards -->
+      <!-- Total 15 cards -->
+      <!-- You can generate more dynamically -->
+      <!-- One card -->
+      <div class="card text-center product-card mx-2 flex-shrink-0" style="width: 120px;" title="Fresh Apples">
+        <img src="https://easyenglishpath.com/wp-content/uploads/2023/10/vege-2-1.png" class="card-img-top mt-3 mx-auto" alt="Product">
+        <div class="card-body p-2">
+          <small class="card-title">Organic Vegetable</small>
+        </div>
+      </div>
+      <!-- Repeat same block 14 more times -->
+      <!-- COPY START -->
+      <div class="card text-center product-card mx-2 flex-shrink-0" style="width: 120px;"><img src="https://easyenglishpath.com/wp-content/uploads/2023/10/Slide6.png" class="card-img-top mt-3 mx-auto"><div class="card-body p-2"><small>Organic Vegetable</small></div></div>
+      <div class="card text-center product-card mx-2 flex-shrink-0" style="width: 120px;"><img src="https://easyenglishpath.com/wp-content/uploads/2023/10/vege-2-1.png" class="card-img-top mt-3 mx-auto"><div class="card-body p-2"><small>Organic Vegetable</small></div></div>
+      <div class="card text-center product-card mx-2 flex-shrink-0" style="width: 120px;"><img src="https://easyenglishpath.com/wp-content/uploads/2023/10/vege-5-7.png" class="card-img-top mt-3 mx-auto"><div class="card-body p-2"><small>Organic Vegetable</small></div></div>
+      <div class="card text-center product-card mx-2 flex-shrink-0" style="width: 120px;"><img src="https://easyenglishpath.com/wp-content/uploads/2023/10/Slide6.png" class="card-img-top mt-3 mx-auto"><div class="card-body p-2"><small>Organic Vegetable</small></div></div>
+      <div class="card text-center product-card mx-2 flex-shrink-0" style="width: 120px;"><img src="https://via.placeholder.com/80" class="card-img-top mt-3 mx-auto"><div class="card-body p-2"><small>Organic Vegetable</small></div></div>
+      <div class="card text-center product-card mx-2 flex-shrink-0" style="width: 120px;"><img src="https://via.placeholder.com/80" class="card-img-top mt-3 mx-auto"><div class="card-body p-2"><small>Organic Vegetable</small></div></div>
+      <div class="card text-center product-card mx-2 flex-shrink-0" style="width: 120px;"><img src="https://easyenglishpath.com/wp-content/uploads/2023/10/vege-2-1.png" class="card-img-top mt-3 mx-auto"><div class="card-body p-2"><small>Organic Vegetable</small></div></div>
+      <div class="card text-center product-card mx-2 flex-shrink-0" style="width: 120px;"><img src="https://via.placeholder.com/80" class="card-img-top mt-3 mx-auto"><div class="card-body p-2"><small>Organic Vegetable</small></div></div>
+      <div class="card text-center product-card mx-2 flex-shrink-0" style="width: 120px;"><img src="https://easyenglishpath.com/wp-content/uploads/2023/10/Slide6.png" class="card-img-top mt-3 mx-auto"><div class="card-body p-2"><small>Organic Vegetable</small></div></div>
+      <div class="card text-center product-card mx-2 flex-shrink-0" style="width: 120px;"><img src="https://via.placeholder.com/80" class="card-img-top mt-3 mx-auto"><div class="card-body p-2"><small>Organic Vegetable</small></div></div>
+      <div class="card text-center product-card mx-2 flex-shrink-0" style="width: 120px;"><img src="https://via.placeholder.com/80" class="card-img-top mt-3 mx-auto"><div class="card-body p-2"><small>Organic Vegetable</small></div></div>
+      <div class="card text-center product-card mx-2 flex-shrink-0" style="width: 120px;"><img src="https://easyenglishpath.com/wp-content/uploads/2023/10/Slide6.png" class="card-img-top mt-3 mx-auto"><div class="card-body p-2"><small>Organic Vegetable</small></div></div>
+      <div class="card text-center product-card mx-2 flex-shrink-0" style="width: 120px;"><img src="https://via.placeholder.com/80" class="card-img-top mt-3 mx-auto"><div class="card-body p-2"><small>Organic Vegetable</small></div></div>
+      <!-- COPY END -->
+    </div>
+
+    <!-- Left & Right Hover Zones -->
+    <div id="hover-left" class="scroll-zone start-0"></div>
+    <div id="hover-right" class="scroll-zone end-0"></div>
+  </div>
+</div>
+
+
+
+
+
+
+
+<div class="container-fluid col-lg-12 mt-4 d-flex">
+    <h5 id="Electronics ">Select Categories</h5>
+    <h5 class="ml-auto mr-3">Show All</h5>
+  </div>
+  <div class="container-fluid d-flex flex-wrap gap-3 mt-3 ">
+    <div class="category-icon col text-center"><img src="./icon_1.png" alt=""><br><small>Organic
+        Vegetable</small></div>
+    <div class="category-icon col text-center"><img src="./icon_2.png" alt=""><br><small>Organic
+        Vegetable</small></div>
+    <div class="category-icon col text-center"><img src="./icon_3.png" alt=""><br><small>Organic
+        Vegetable</small></div>
+    <div class="category-icon col text-center "><img src="./icon_4.png" alt=""><br><small>Organic
+        Vegetable</small></div>
+    <div class="category-icon col text-center"><img src="./icon_5.png" alt=""><br><small>Organic
+        Vegetable</small></div>
+    <div class="category-icon col text-center"><img src="./icon_6.png" alt=""><br><small>Organic
+        Vegetable</small></div>
+    <div class="category-icon col text-center"><img src="./icon_7.png" alt=""><br><small>Organic
+        Vegetable</small></div>
+    <div class="category-icon col text-center"><img src="./icon_8.png" alt=""><br><small>Organic
+        Vegetable</small></div>
+    <div class="category-icon col text-center"><img src="./icon_4.png" alt=""><br><small>Organic
+        Vegetable</small></div>
+    <div class="category-icon col text-center"><img src="./icon_4.png" alt=""><br><small>Organic
+        Vegetable</small></div>
+    <div class="category-icon col text-center"><img src="./icon_1.png" alt=""><br><small>Organic
+        Vegetable</small></div>
+    <div class="category-icon col text-center"><img src="./icon_1.png" alt=""><br><small>Organic
+        Vegetable</small></div>
+    <div class="category-icon col text-center"><img src="./icon_1.png" alt=""><br><small>Organic
+        Vegetable</small></div>
+    <div class="category-icon col text-center"><img src="/icon_2.png" alt=""><br><small>Organic
+        Vegetable</small></div>
+    <div class="category-icon col text-center"><img src="/icon_3.png" alt=""><br><small>Organic
+        Vegetable</small></div>
+    <div class="category-icon col text-center"><img src="/icon_4.png" alt=""><br><small>Organic
+        Vegetable</small></div>
+    <div class="category-icon col text-center"><img src="/icon_5.png" alt=""><br><small>Organic
+        Vegetable</small></div>
+    <div class="category-icon col text-center"><img src="/icon_6.png" alt=""><br><small>Organic
+        Vegetable</small></div>
+    <div class="category-icon col text-center"><img src="/icon_7.png" alt=""><br><small>Organic
+        Vegetable</small></div>
+    <div class="category-icon col text-center"><img src="/icon_8.png" alt=""><br><small>Organic
+        Vegetable</small></div>
+    <div class="category-icon col text-center"><img src="/icon_8.png" alt=""><br><small>Organic
+        Vegetable</small></div>
+    <div class="category-icon col text-center"><img src="/icon_1.png" alt=""><br><small>Organic
+        Vegetable</small></div>
+    <div class="category-icon col text-center"><img src="/icon_2.png" alt=""><br><small>Organic
+        Vegetable</small></div>
+    <div class="category-icon col text-center"><img src="/icon_3.png" alt=""><br><small>Organic
+        Vegetable</small></div>
+    <div class="category-icon col text-center"><img src="/icon_4.png" alt=""><br><small>Organic
+        Vegetable</small></div>
+    <div class="category-icon col text-center"><img src="/icon_4.png" alt=""><br><small>Organic
+        Vegetable</small></div>
+    <div class="category-icon col text-center"><img src="/icon_5.png" alt=""><br><small>Organic
+        Vegetable</small></div>
+    <div class="category-icon col text-center"><img src="/icon_8.png" alt=""><br><small>Organic
+        Vegetable</small></div>
+  </div>
+  <!-- product scroll section end -->
+  <!-- service section start -->
+  <div class="container-fluid col-lg-12 mt-4 d-flex">
+    <h5 id="Electronics ">Service Section</h5>
+    <h5 class="ml-auto mr-3">Show All</h5>
+  </div>
+  <div class="container-fluid d-flex flex-wrap gap-3 mt-3 ">
+    <div class="category-icon col text-center"><img height="100px" src="./service_1.png" alt=""><br><small>Wide
+        Assortment <br>
+        Orders $50 or more</small></div>
+    <div class="category-icon col text-center"><img height="100px" src="./service_2.png" alt=""><br><small>Easy
+        Return Policy <br>
+        Orders $50 or more</small></div>
+    <div class="category-icon col text-center"><img height="100px" src="./service_3.png" alt=""><br><small>Best
+        Prices & Offers <br>
+        Orders $50 or more</small></div>
+    <div class="category-icon col text-center "><img height="100px" src="./service_4.png"
+        alt=""><br><small>Support 24/7 <br>
+        Orders $50 or more</small></div>
+  </div>
+  <!-- service section start -->
+  <!-- Featured Grocery start -->
+  <div class="container-fluid  mt-4 d-flex mb-4">
+    <h5 id="Electronics ">Featured Grocery</h5>
+    <h5 class="ml-auto mr-3">Show All</h5>
+  </div>
+  <div class="container-fluid ">
+    <div class="row mx-auto my-auto">
+
+      <div class="card" style="width: 15rem;">
+        <img class="card-img-top my-auto mx-auto" src="./card_3.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Organic Vegetable</h5>
+          <p class="card-text">Price - 330/-</p>
+          <a href="#" class="btn btn-danger">Buy Now</a>
+        </div>
+      </div>
+      <div class="card" style="width: 15rem;">
+        <img class="card-img-top my-auto mx-auto" src="./card_2.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Organic Vegetable</h5>
+          <p class="card-text">Price - 30/-</p>
+          <a href="#" class="btn btn-danger">Buy Now</a>
+        </div>
+      </div>
+      <div class="card" style="width: 15rem;">
+        <img class="card-img-top my-auto mx-auto" src="/card_1.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Organic Vegetable</h5>
+          <p class="card-text">Price - 320/-</p>
+          <a href="#" class="btn btn-danger">Buy Now</a>
+        </div>
+      </div>
+      <div class="card" style="width: 15rem;">
+        <img class="card-img-top my-auto mx-auto" src="/card_2.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Organic Vegetable</h5>
+          <p class="card-text">Price - 360/-</p>
+          <a href="#" class="btn btn-danger">Buy Now</a>
+        </div>
+      </div>
+      <div class="card" style="width: 15rem;">
+        <img class="card-img-top my-auto mx-auto" src="/card_4.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Organic Vegetable</h5>
+          <p class="card-text">Price - 390/-</p>
+          <a href="#" class="btn btn-danger">Buy Now</a>
+        </div>
+      </div>
+      <div class="card" style="width: 15rem;">
+        <img class="card-img-top my-auto mx-auto" src="/card_3.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Organic Vegetable</h5>
+          <p class="card-text">Price - 130/-</p>
+          <a href="#" class="btn btn-danger">Buy Now</a>
+        </div>
+      </div>
+      <div class="card" style="width: 15rem;">
+        <img class="card-img-top my-auto mx-auto" src="/card_1.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Organic Vegetable</h5>
+          <p class="card-text">Price - 730/-</p>
+          <a href="#" class="btn btn-danger">Buy Now</a>
+        </div>
+      </div>
+      <div class="card" style="width: 15rem;">
+        <img class="card-img-top my-auto mx-auto" src="/card_2.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Organic Vegetable</h5>
+          <p class="card-text">Price - 530/-</p>
+          <a href="#" class="btn btn-danger">Buy Now</a>
+        </div>
+      </div>
+      <div class="card" style="width: 15rem;">
+        <img class="card-img-top my-auto mx-auto" src="/card_3.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Organic Vegetable</h5>
+          <p class="card-text">Price - 930/-</p>
+          <a href="#" class="btn btn-danger">Buy Now</a>
+        </div>
+      </div>
+      <div class="card" style="width: 15rem;">
+        <img class="card-img-top my-auto mx-auto" src="/card_4.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Organic Vegetable</h5>
+          <p class="card-text">Price - 230/-</p>
+          <a href="#" class="btn btn-danger">Buy Now</a>
+        </div>
+      </div>
+      <div class="card" style="width: 15rem;">
+        <img class="card-img-top my-auto mx-auto" src="/card_1.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Organic Vegetable</h5>
+          <p class="card-text">Price - 230/-</p>
+          <a href="#" class="btn btn-danger">Buy Now</a>
+        </div>
+      </div>
+      <div class="card" style="width: 15rem;">
+        <img class="card-img-top my-auto mx-auto" src="/card_2.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Organic Vegetable</h5>
+          <p class="card-text">Price - 230/-</p>
+          <a href="#" class="btn btn-danger">Buy Now</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- Featured Grocery end -->
+
+  <!-- Products With Discounts start -->
+  <div class="container-fluid d-flex mt-3 mb-3">
+    <h5>Products With Discounts</h5>
+    <h5 class="ml-auto mr-2 my-auto" id="Discounts">89 Day 16 Hour 06 Min 16 Sec</h5>
+  </div>
+  <div class="container-fluid" id="product_discount">
+    <div class="row d-flex col-lg-12 mx-auto ">
+      <!-- 1st -->
+      <div class="col-lg-4 mt-3" id="juice">
+        <h3>
+          Alpro Organic Flavored <br>
+          Fresh Juice
+        </h3>
+        <p>
+          Only <br>
+        <h3> $15.00 </h3>
+        </p>
+      </div>
+      <!-- 2nd -->
+      <div id="perduct_card" class="d-flex col-lg-3 mx-auto mt-3 bg-light" style="width: 15rem;">
+        <div class="mx-auto my-auto">
+          <img height="150px" width="150px" class="my-auto mx-auto" src="/card_2.png" alt="Card image cap">
+        </div>
+        <div class="mx-auto my-auto ">
+          <h5 class="card-title">Organic Vegetable</h5>
+          <p class="card-text">Price - 230/-</p>
+          <a href="#" class="btn btn-danger">Buy Now</a>
+        </div>
+      </div>
+      <!-- 3rd -->
+      <div id="perduct_card" class="d-flex col-lg-3 mt-3 bg-light" style="width: 15rem;">
+        <div class="mx-auto my-auto">
+          <img height="150px" width="150px" class="my-auto mx-auto" src="/card_2.png" alt="Card image cap">
+        </div>
+        <div class="mx-auto my-auto ">
+          <h5 class="card-title">Organic Vegetable</h5>
+          <p class="card-text">Price - 230/-</p>
+          <a href="#" class="btn btn-danger">Buy Now</a>
+        </div>
+      </div>
+
+    </div>
+    <!-- next section -->
+    <div class="row d-flex col-lg-12 mx-auto ">
+      <!-- 1st -->
+      <div class="col-lg-4 mt-3" id="chicken">
+        <h3>
+          Alpro Organic Flavored <br>
+          Fresh Juice
+        </h3>
+        <p>
+          Only <br>
+        <h3> $15.00 </h3>
+        </p>
+      </div>
+      <!-- 2nd -->
+      <div id="perduct_card" class="d-flex col-lg-3 mx-auto mt-3 bg-light" style="width: 15rem;">
+        <div class="mx-auto my-auto">
+          <img height="150px" width="150px" class="my-auto mx-auto" src="/card_2.png" alt="Card image cap">
+        </div>
+        <div class="mx-auto my-auto ">
+          <h5 class="card-title">Organic Vegetables</h5>
+          <p class="card-text">Price - 230/-</p>
+          <a href="#" class="btn btn-danger">Buy Now</a>
+        </div>
+      </div>
+      <!-- 3rd -->
+      <div id="perduct_card" class="d-flex col-lg-3 mt-3 bg-light" style="width: 15rem;">
+        <div class="mx-auto my-auto">
+          <img height="150px" width="150px" class="my-auto mx-auto" src="/card_2.png" alt="Card image cap">
+        </div>
+        <div class="mx-auto my-auto ">
+          <h5 class="card-title">Organic Vegetable</h5>
+          <p class="card-text">Price - 230/-</p>
+          <a href="#" class="btn btn-danger">Buy Now</a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  <!-- Products With Discounts end -->
+
+  <!-- Weekly Best Selling Groceries start -->
+  <div class="container-fluid d-flex mt-3 mb-3">
+    <h5 class="p-2">Weekly Best Selling Groceries</h5>
+    <div class="ml-auto p-2">
+      <button id="Weekly_Best_Selling" type="button" class="btn  btn-sm first">Frozen Foods</button>
+      <button id="Weekly_Best_Selling" type="button" class="btn  btn-sm ml-3">Diet Foods</button>
+      <button id="Weekly_Best_Selling" type="button" class="btn  btn-sm ml-3">Healthy Foods</button>
+      <button id="Weekly_Best_Selling" type="button" class="btn  btn-sm ml-3">Vitamin Items</button>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row mx-auto my-auto">
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top mx-auto" /card_2.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Firebase business makes your profit</h5>
+          <p class="card-text">100 /-</p>
+          <a href="#" class="btn" id="Groceries1">Cart <img id="Groceries" height="10px" src="/cart.png" alt="">
+          </a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top mx-auto" src="/card_3.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Firebase business makes your profit</h5>
+          <p class="card-text">100 /-</p>
+          <a href="#" class="btn" id="Groceries1">Cart <img id="Groceries" height="10px" src="/cart.png" alt="">
+          </a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top mx-auto" src="/card_3.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Firebase business makes your profit</h5>
+          <p class="card-text">100 /-</p>
+          <a href="#" class="btn" id="Groceries1">Cart <img id="Groceries" height="10px" src="/cart.png" alt="">
+          </a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top mx-auto" src="/card_4.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Firebase business makes your profit</h5>
+          <p class="card-text">100 /-</p>
+          <a href="#" class="btn" id="Groceries1">Cart <img id="Groceries" height="10px" src="/cart.png" alt="">
+          </a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top mx-auto" src="/card_1.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Firebase business makes your profit</h5>
+          <p class="card-text">100 /-</p>
+          <a href="#" class="btn" id="Groceries1">Cart <img id="Groceries" height="10px" src="/cart.png" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Weekly Best Selling Groceries end -->
+
+  <!-- Weekend Discount start -->
+  <div class="container-fluid d-flex mt-3 mb-3">
+    <h5>Weekend Discount</h5>
+    <h5 class="ml-auto mr-2 my-auto">See All</h5>
+  </div>
+
+  <div class="container-fluid col-lg-12">
+    <div class="row mx-auto my-auto">
+      <div class="Weekend_discount mx-3 ml-4" id="Weekend_discount_1">
+        <a href="#" class="btn btn-lg btn-danger" id="Weekend_button">Weekend Discount</a>
+        <h3 class="title" id="Weekend_button">Drink Fresh Corn Juice <br><span>Good Taste</span></h3>
+      </div>
+      <div class="Weekend_discount mx-3 ml-4" id="Weekend_discount_2">
+        <a href="#" class="btn btn-lg btn-danger" id="Weekend_button">Weekend Discount</a>
+        <h3 class="title" id="Weekend_button">Drink Fresh Corn Juice <br><span>Good Taste</span></h3>
+      </div>
+      <div class="Weekend_discount mx-3 ml-4" id="Weekend_discount_3">
+        <a href="#" class="btn btn-lg btn-danger" id="Weekend_button">Weekend Discount</a>
+        <h3 class="title" id="Weekend_button">Drink Fresh Corn Juice <br><span>Good Taste</span></h3>
+      </div>
+
+    </div>
+  </div>
+  <!-- Weekend Discount end -->
+
+  <!-- Top Trending Products start -->
+  <div class="container-fluid d-flex mt-3 mb-3">
+    <h5>Top Trending Products</h5>
+    <h5 class="ml-auto mr-2 my-auto">See All</h5>
+  </div>
+  <div class="container-fluid">
+    <div class="row col-lg-12 mx-auto" id="Top_Trending_Products">
+      <!-- 1st -->
+      <div id="Top_Trending_Products_card" class="d-flex bg-light ml-4 my-3 mx-3" style="width: 20rem;">
+        <div class="mx-auto my-auto">
+          <img height="100px" width="100px" class="my-auto mx-auto" src="/card_2.png" alt="Card image cap">
+        </div>
+        <div class="mx-auto my-auto ">
+          <h6 class="card-title">Mellin Grano Tenero</h6>
+          <p class="card-text">500g Pack</p>
+          <a href="#" class="btn d-flex btn-lg" id="Top_Trending_Products_button">$36.00 <p class="mx-auto btn-sm "
+              id="Top_Trending_Products_button_2">$36.00</p>
+          </a>
+        </div>
+      </div>
+      <!-- 2nd -->
+      <div id="Top_Trending_Products_card" class="d-flex bg-light my-3 mx-3" style="width: 20rem;">
+        <div class="mx-auto my-auto">
+          <img height="100px" width="100px" class="my-auto mx-auto" src="/card_2.png" alt="Card image cap">
+        </div>
+        <div class="mx-auto my-auto ">
+          <h6 class="card-title">Mellin Grano Tenero</h6>
+          <p class="card-text">500g Pack</p>
+          <a href="#" class="btn d-flex btn-lg" id="Top_Trending_Products_button">$36.00 <p class="mx-auto btn-sm "
+              id="Top_Trending_Products_button_2">$36.00</p>
+          </a>
+        </div>
+      </div>
+      <!-- 3rd -->
+      <div id="Top_Trending_Products_card" class="d-flex bg-light my-3 mx-3" style="width: 20rem;">
+        <div class="mx-auto my-auto">
+          <img height="100px" width="100px" class="my-auto mx-auto" src="/card_2.png" alt="Card image cap">
+        </div>
+        <div class="mx-auto my-auto ">
+          <h6 class="card-title">Mellin Grano Tenero</h6>
+          <p class="card-text">500g Pack</p>
+          <a href="#" class="btn d-flex btn-lg" id="Top_Trending_Products_button">$36.00 <p class="mx-auto btn-sm "
+              id="Top_Trending_Products_button_2">$36.00</p>
+          </a>
+        </div>
+      </div>
+      <!-- 4th -->
+      <div id="Top_Trending_Products_card" class="d-flex bg-light my-3 mx-3" style="width: 20rem;">
+        <div class="mx-auto my-auto">
+          <img height="100px" width="100px" class="my-auto mx-auto" src="/card_2.png" alt="Card image cap">
+        </div>
+        <div class="mx-auto my-auto ">
+          <h6 class="card-title">Mellin Grano Tenero</h6>
+          <p class="card-text">500g Pack</p>
+          <a href="#" class="btn d-flex btn-lg" id="Top_Trending_Products_button">$36.00 <p class="mx-auto btn-sm "
+              id="Top_Trending_Products_button_2">$36.00</p>
+          </a>
+        </div>
+      </div>
+      <!-- 5th -->
+      <div id="Top_Trending_Products_card" class="d-flex bg-light ml-4 my-3 mx-3" style="width: 20rem;">
+        <div class="mx-auto my-auto">
+          <img height="100px" width="100px" class="my-auto mx-auto" src="/card_2.png" alt="Card image cap">
+        </div>
+        <div class="mx-auto my-auto ">
+          <h6 class="card-title">Mellin Grano Tenero</h6>
+          <p class="card-text">500g Pack</p>
+          <a href="#" class="btn d-flex btn-lg" id="Top_Trending_Products_button">$36.00 <p class="mx-auto btn-sm "
+              id="Top_Trending_Products_button_2">$36.00</p>
+          </a>
+        </div>
+      </div>
+      <!-- 6th -->
+      <div id="Top_Trending_Products_card" class="d-flex bg-light my-3 mx-3" style="width: 20rem;">
+        <div class="mx-auto my-auto">
+          <img height="100px" width="100px" class="my-auto mx-auto" src="/card_2.png" alt="Card image cap">
+        </div>
+        <div class="mx-auto my-auto ">
+          <h6 class="card-title">Mellin Grano Tenero</h6>
+          <p class="card-text">500g Pack</p>
+          <a href="#" class="btn d-flex btn-lg" id="Top_Trending_Products_button">$36.00 <p class="mx-auto btn-sm "
+              id="Top_Trending_Products_button_2">$36.00</p>
+          </a>
+        </div>
+      </div>
+      <!-- 7th -->
+      <div id="Top_Trending_Products_card" class="d-flex bg-light my-3 mx-3" style="width: 20rem;">
+        <div class="mx-auto my-auto">
+          <img height="100px" width="100px" class="my-auto mx-auto" src="/card_2.png" alt="Card image cap">
+        </div>
+        <div class="mx-auto my-auto ">
+          <h6 class="card-title">Mellin Grano Tenero</h6>
+          <p class="card-text">500g Pack</p>
+          <a href="#" class="btn d-flex btn-lg" id="Top_Trending_Products_button">$36.00 <p class="mx-auto btn-sm "
+              id="Top_Trending_Products_button_2">$36.00</p>
+          </a>
+        </div>
+      </div>
+      <!-- 8th -->
+      <div id="Top_Trending_Products_card" class="d-flex bg-light my-3 mx-3" style="width: 20rem;">
+        <div class="mx-auto my-auto">
+          <img height="100px" width="100px" class="my-auto mx-auto" src="/card_2.png" alt="Card image cap">
+        </div>
+        <div class="mx-auto my-auto ">
+          <h6 class="card-title">Mellin Grano Tenero</h6>
+          <p class="card-text">500g Pack</p>
+          <a href="#" class="btn d-flex btn-lg" id="Top_Trending_Products_button">$36.00 <p class="mx-auto btn-sm "
+              id="Top_Trending_Products_button_2">$36.00</p>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- Top Trending Products end -->
+
+  <!-- Latest Blog Post Insights start -->
+  <div class="container-fluid d-flex mt-3 mb-3">
+    <h5>Latest Blog Post Insights</h5>
+    <h5 class="ml-auto mr-2 my-auto">See All</h5>
+  </div>
+  <div class="container-fluid">
+    <div class="row col-lg-12 mx-auto" id="Latest_Blog_Post_Insights">
+      <!-- 1st -->
+      <div id="blog_full_body" class="card p-0" style="width: 22rem;">
+        <div id="Latest_Blog_Post_Insights_img_box">
+          <img id="Latest_Blog_Post_Insights_img" class="card-img-top"
+            src="	https://ekomart-nextjs.vercel.app/assets/images/blog/01.jpg" alt="Card image cap">
+        </div>
+        <div class="card-body">
+          <p id="Latest_Blog_text" class="card-text">Shion Fixation: Fueling Your Passion for All Things Stylish</p>
+          <p id="Latest_Blog_text">
+            <img src="/plus_icon.png" alt="">Read Detail
+          </p>
+        </div>
+      </div>
+      <!-- 2nd -->
+      <div id="blog_full_body" class="card p-0" style="width: 22rem;">
+        <div id="Latest_Blog_Post_Insights_img_box">
+          <img id="Latest_Blog_Post_Insights_img" class="card-img-top"
+            src="		https://ekomart-nextjs.vercel.app/assets/images/blog/02.jpg" alt="Card image cap">
+        </div>
+        <div class="card-body">
+          <p id="Latest_Blog_text" class="card-text">Shion Fixation: Fueling Your Passion for All Things Stylish</p>
+          <p id="Latest_Blog_text">
+            <img src="/plus_icon.png" alt="">Read Detail
+          </p>
+        </div>
+      </div>
+      <!-- 3rd -->
+      <div id="blog_full_body" class="card p-0" style="width: 22rem;">
+        <div id="Latest_Blog_Post_Insights_img_box">
+          <img id="Latest_Blog_Post_Insights_img" class="card-img-top"
+            src="https://ekomart-nextjs.vercel.app/assets/images/blog/03.jpg" alt="Card image cap">
+        </div>
+        <div class="card-body">
+          <p id="Latest_Blog_text" class="card-text">Shion Fixation: Fueling Your Passion for All Things Stylish</p>
+          <p id="Latest_Blog_text">
+            <img src="/plus_icon.png" alt="">Read Detail
+          </p>
+        </div>
+      </div>
+      <!-- 4th -->
+      <div id="blog_full_body" class="card p-0" style="width: 22rem;">
+        <div id="Latest_Blog_Post_Insights_img_box">
+          <img id="Latest_Blog_Post_Insights_img" class="card-img-top"
+            src="	https://ekomart-nextjs.vercel.app/assets/images/blog/04.jpg" alt="Card image cap">
+        </div>
+        <div class="card-body">
+          <p id="Latest_Blog_text" class="card-text">Shion Fixation: Fueling Your Passion for All Things Stylish</p>
+          <p id="Latest_Blog_text">
+            <img src="/plus_icon.png" alt="">Read Detail
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- Latest Blog Post Insights end -->
+
+  <!-- footer start -->
+  <footer class="footer">
+    <div class="container-fluid mt-5">
+      <div class="row">
+
+        <!-- About -->
+        <div class="col-md-3">
+          <h5>About Company</h5>
+          <div class="d-flex align-items-center mb-2">
+            <div class="icon-circle">
+              <span class="text-success"><img height="40px" width="40px" src="/telephone.png" alt=""></span>
+            </div>
+            <div>
+              <small>Have Question? Call Us 24/7</small><br>
+              <div class="phone-number">+91 8260569662</div>
+            </div>
+          </div>
+          <p><strong>Monday – Friday:</strong> 8:00am – 6:00pm</p>
+          <p><strong>Saturday:</strong> 8:00am – 6:00pm</p>
+          <p><strong>Sunday:</strong> <span class="text-dark">Service Close</span></p>
+        </div>
+
+        <!-- Our Stores -->
+        <div class="col-md-2">
+          <h5>Our Stores</h5>
+          <a href="#">Delivery Information</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms & Conditions</a>
+          <a href="#">Support Center</a>
+          <a href="#">Careers</a>
+        </div>
+
+        <!-- Shop Categories -->
+        <div class="col-md-2">
+          <h5>Shop Categories</h5>
+          <a href="#">Contact Us</a>
+          <a href="#">Information</a>
+          <a href="#">About Us</a>
+          <a href="#">Careers</a>
+          <a href="#">Nest Stories</a>
+        </div>
+
+        <!-- Useful Links -->
+        <div class="col-md-2">
+          <h5>Useful Links</h5>
+          <a href="#">Cancellation & Returns</a>
+          <a href="#">Report Infringement</a>
+          <a href="#">Payments</a>
+          <a href="#">Shipping</a>
+          <a href="#">FAQ</a>
+        </div>
+
+        <!-- Newsletter -->
+        <div class="col-md-3">
+          <h5>Our Newsletter</h5>
+          <p>Subscribe to the mailing list to receive updates on new arrivals and other discounts</p>
+          <form class="form-inline">
+            <div class="form-group mb-2 mr-2">
+              <input type="email" class="form-control" placeholder="Your email address">
+            </div>
+            <button type="submit" class="btn btn-success mb-2">Subscribe</button>
+          </form>
+          <small><input type="checkbox"> I would like to receive news and special offer</small>
+        </div>
+
+      </div>
+
+      <hr>
+
+      <!-- Social and Payments -->
+      <div class="d-flex justify-content-between align-items-center flex-wrap">
+        <div class="social-icons d-flex">
+          <strong>Follow Us:</strong>
+          <a class="ml-3" href="#"><img height="30px" src="/facebook.png" alt=""><i
+              class="fab fa-facebook-f"></i> </a>
+          <a href="#"><i class="fab fa-twitter"></i> <img height="30px" src="/whatsapp.png" alt=""> </a>
+          <a href="#"><i class="fab fa-youtube"></i> <img height="30px" src="/youtube.png" alt=""> </a>
+          <a href="#"><i class="fab fa-whatsapp"></i> <img height="30px" src="/twiter.png" alt=""></a>
+        </div>
+
+        <div class="payment-icons text-right d-flex">
+          <span>Payment Accepts:</span><br>
+          <img style="height: 20px;" src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png" alt="Visa">
+          <img style="height: 20px;" src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Mastercard_2019_logo.svg"
+            alt="Mastercard">
+          <img style="height: 20px;" src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal">
+        </div>
+      </div>
+
+      <!-- Download App -->
+      <div class="d-flex justify-content-center mt-4 app-download">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play">
+        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store">
+      </div>
+
+    </div>
+
+    <div class="footer-bottom mt-4">
+      <p>Copyright 2025 ©<strong>Ekomart</strong>. All rights reserved.</p>
+    </div>
+  </footer>
+  <!-- footer end -->
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+  
+ <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const tooltipTriggerList = [].slice.call(document.querySelectorAll('[title]'))
+    tooltipTriggerList.map(el => new bootstrap.Tooltip(el))
+  });
+</script>
+
+
+
+</body>
+</html>
