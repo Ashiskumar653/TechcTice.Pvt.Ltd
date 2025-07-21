@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stylish Button Page</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+        background-color: #f0f0f0;
+         
+  background: linear-gradient(to bottom right, rgba(0,0,0,0.5), rgba(255,255,255,0.3)), 
+              url('https://wallpaperaccess.com/full/395944.jpg');
+  background-size: cover;
+  background-position: center;
+
+        /* background-image: url("https://wallpaperaccess.com/full/395944.jpg"); */
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .outer-container {
+      padding: 50px;
+      border-radius: 20px;
+      background-color: rgb(190, 192, 238);
+      box-shadow: 0 10px 25px rgba(0, 0.5, 0.5, 0.5);
+    }
+
+    .inner-button {
+      padding: 15px 30px;
+      background-color: #30a9bf;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .inner-button:hover {
+      background-color: #093d68;
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="outer-container">
+    <button class="inner-button">Click Me</button>
+  </div>
+  
+</body>
+</html>
