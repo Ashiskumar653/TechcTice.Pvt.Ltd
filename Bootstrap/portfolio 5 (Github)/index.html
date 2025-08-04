@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #fff;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+        }
+        .hero {
+            background: linear-gradient(120deg, #00b4d8, #90e0ef);
+            color: #fff;
+            padding: 60px 0 40px 0;
+            text-align: center;
+        }
+        .project-card:hover {
+            transform: translateY(-8px) scale(1.03);
+            transition: 0.3s;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.10);
+        }
+        .footer {
+            background: #212529;
+            color: #fff;
+            padding: 24px 0;
+            text-align: center;
+        }
+        .social-icons a {
+            color: #00b4d8;
+            margin: 0 10px;
+            font-size: 1.5rem;
+            transition: color 0.2s;
+        }
+        .social-icons a:hover {
+            color: #0077b6;
+        }
+         .profile-img {
+            width: 160px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #fff;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+        }
+        .section-title {
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        .career-education-row {
+            background: #f8f9fa;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            padding: 2rem 1rem;
+            margin-bottom: 2.5rem;
+        }
+        .education-table th {
+            background: #00b4d8;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="./linked in profile.jpg" alt="profile" class="profile-img mb-4">
+        <h1 class="display-4 fw-bold">Ashis Kumar Sahoo</h1>
+        <p class="lead mb-2">Web Developer & Designer </p>
+        <div class="social-icons mb-3">
+            <a href="#" aria-label="GitHub"><i class="bi bi-github"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+        </div>
+        <a href="#projects" class="btn btn-light btn-lg mt-2">View My Work</a>
+    </section>
+
+    <!-- About Section -->
+    <section class="container py-5">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h2 class="fw-bold mb-3">About Me</h2>
+                <p>
+                    Hello! I’m Ashis.. A passionate web developer with expertise in crafting beautiful and functional websites. I love solving problems with code and am always eager to learn new technologies and contribute to open source.
+                </p>
+                <ul>
+                    <li>🌟 HTML, CSS, JavaScript, Bootstrap</li>
+                    <li>⚙️ React, Node.js, Express</li>
+                    <li>🗄️ MongoDB, SQL</li>
+                    <li>🎨 UI/UX Design</li>
+                </ul>
+            </div>
+            <div class="col-md-6 text-center">
+                <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&q=80" alt="workspace" class="img-fluid rounded shadow">
+            </div>
+        </div>
+    </section>
+
+
+ <div class="container py-5">
+
+        <!-- Three Column Row: Career | Photo | Education -->
+        <div class="row align-items-center career-education-row">
+            <!-- Career (Left) -->
+            <div class="col-md-4 mb-4 mb-md-0 text-center text-md-start">
+                <h4 class="section-title">Career</h4>
+                <ul class="list-unstyled">
+                    <li>
+                        <strong> Junior Software Developer</strong><br>
+                        Techctice Pvt Ltd.<br>
+                        <small>2025 - Present</small>
+                    </li>
+                    <li class="mt-3">
+                        <strong>Intern Developer</strong><br>
+                        XYZ Innovations<br>
+                        <small>2025 - 2026</small>
+                    </li>
+                </ul>
+            </div>
+            <!-- Photo (Middle) -->
+            <div class="col-md-4 mb-4 mb-md-0 text-center">
+                <img src="./linkdin profile.jpg" alt="Your Photo" class="profile-img mb-2">
+                <h5 class="mt-2">Ashis Kumar Sahoo</h5>
+            </div>
+            <!-- Education (Right) -->
+            <div class="col-md-4 text-center text-md-start">
+                <h4 class="section-title">Education</h4>
+                <ul class="list-unstyled">
+                    <li>
+                        <strong>Masters in Computer Science</strong><br>
+                        Gandhi institute for  Technology , Bhubaneswar <br>
+                        <small>2014 - 2026</small>
+                    </li>
+                    <li class="mt-3">
+                        <strong>Higher Secondary</strong><br>
+                        State Board, Odisha<br>
+                        <small>2017 - 2019</small>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Education Table -->
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <h4 class="section-title text-center mb-3">Educational Qualifications</h4>
+                <div class="table-responsive">
+                    <table class="table table-bordered education-table align-middle">
+                        <thead>
+                            <tr>
+                                <th>Degree</th>
+                                <th>Institution</th>
+                                <th>Year</th>
+                                <th>Percentage/CGPA</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Masters in Computer Appilcation</td>
+                                <td>Gandhi Institute for  Technology</td>
+                                <td>2024 - 2026</td>
+                                <td>8.7 CGPA</td>
+                            </tr>
+                            <tr>
+                                <td>Higher Secondary</td>
+                                <td>State Board, Odisha</td>
+                                <td>2017 - 2019</td>
+                                <td>88%</td>
+                            </tr>
+                            <tr>
+                                <td>Matriculation</td>
+                                <td>Central Public School</td>
+                                <td>2016 - 2017</td>
+                                <td>93%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+    <!-- Projects Section -->
+    <section id="projects" class="bg-light py-5">
+        <div class="container">
+            <h2 class="fw-bold text-center mb-5">Projects</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card project-card h-100 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=400&q=80" class="card-img-top" alt="Project 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Portfolio Website</h5>
+                            <p class="card-text">A sleek and modern portfolio to showcase my work, built with HTML, CSS, and Bootstrap 5.</p>
+                        </div>
+                        <div class="card-footer bg-white">
+                            <a href="#" class="btn btn-outline-primary btn-sm">View Demo</a>
+                            <a href="#" class="btn btn-outline-secondary btn-sm">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card project-card h-100 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=400&q=80" class="card-img-top" alt="Project 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Task Manager App</h5>
+                            <p class="card-text">A simple and intuitive task manager app to organize your day, made with React and Bootstrap.</p>
+                        </div>
+                        <div class="card-footer bg-white">
+                            <a href="#" class="btn btn-outline-primary btn-sm">View Demo</a>
+                            <a href="#" class="btn btn-outline-secondary btn-sm">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card project-card h-100 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?w=400&q=80" class="card-img-top" alt="Project 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Blog Platform</h5>
+                            <p class="card-text">A full-featured blogging platform with user authentication and Markdown support. Powered by Node.js.</p>
+                        </div>
+                        <div class="card-footer bg-white">
+                            <a href="#" class="btn btn-outline-primary btn-sm">View Demo</a>
+                            <a href="#" class="btn btn-outline-secondary btn-sm">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="container py-5">
+        <h2 class="fw-bold mb-4 text-center">Contact Me</h2>
+        <form class="mx-auto" style="max-width: 600px;">
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Your Name">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email" placeholder="you@example.com">
+            </div>
+            <div class="mb-3">
+                <label for="msg" class="form-label">Message</label>
+                <textarea class="form-control" id="msg" rows="4" placeholder="Your message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary px-5">Send</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div>
+                &copy; 2025 @ Ashis. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.js"></script>
+</body>
+</html>
